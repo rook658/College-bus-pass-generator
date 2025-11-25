@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login page
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="icon" type="image/x-icon" href="../images/Cet_logo.jpg">
+    </head>
+    <body class="flex flex-col overflow-x-hidden transition-opacity duration-500 ease-in-out min-h-screen 
+    bg-[url('../images/college_of_engineering_trivandrum_cover.jpg')] bg-cover bg-center bg-no-repeat opacity-80">
+        <div class="flex flex-col items-center justify-center flex-1 ">
+        <form autocomplete="off" class="z-50 border-2 border-gray-200 rounded-lg flex flex-col gap-6 w-[90%] sm:w-[80%] md:w-[60%] 
+        lg:w-[50%] xl:w-[30%] md:p-3 bg-white/90 p-2 sm:p-3">
+            <div class="text-black text-5xl p-3">Log in</div>
+            <a href="sign_up.html" class="underline hover:underline hover:decoration-green-700 hover:text-green-700">Dont have an account?
+                <span class="font-bold">Sign up</span></a>
+            <label for="ID" class="">University ID:</label>
+            <input type="text" name="ID" id="ID" placeholder="Enter your id" class="border-2 border-gray-300 sm:p-2
+            p-1 rounded-lg focus:border-green-700 outline-none ">
+            <div class="flex flex-row justify-between items-center">
+                <label for="setPassword">Set Password:</label>
+                <button type="button" onclick="togglePassword('Password', this)" class="relative h-[35px] w-[35px]">
+                    <img src="../images/dontshowPASSWORD.png" class="show-icon h-[20px] w-[30px]">
+                    <img src="../images/showPASSWORD.png" class="hide-icon hidden">
+                </button>
+            </div>
+            <input type="password" name="Password" id="Password" class="border-2 border-gray-300 sm:p-2 p-1
+            rounded-lg focus:border-green-700 outline-none">
+            <button type="submit" id="login" class="bg-green-700 text-white p-3 rounded-full w-[100px]
+            hover:bg-green-800 opacity-100">Login</button>
+            <div class="flex flex-row">
+                <a href="#" class="underline hover:underline hover:decoration-green-700 hover:text-green-700">Forgot password?</a>
+            </div>
+        </form>
+        </div>
+        <footer class=" w-full">
+            <p class="bg-green-700 text-[10px] text-white p-1 text-center">
+            &copy; 2025 Arjun S G | All rights reserved
+            </p>
+        </footer>
+    </body>
+    <script>
+        function togglePassword(inputId, btn) {
+            const input = document.getElementById(inputId);
+            const showIcon = btn.querySelector(".show-icon");
+            const hideIcon = btn.querySelector(".hide-icon");
+
+            if (input.type === "password") {
+                input.type = "text";
+                showIcon.classList.add("hidden");
+                hideIcon.classList.remove("hidden");
+            } else {
+                input.type = "password";
+                showIcon.classList.remove("hidden");
+                hideIcon.classList.add("hidden");
+            }
+        }
+    </script>
+</html>

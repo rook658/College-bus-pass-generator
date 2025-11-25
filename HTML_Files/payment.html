@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fee payment</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body class="flex flex-col min-h-screen opacity-0 transition-opacity duration-500 ease-in-out">
+
+        <!-- Main content: full height, form centered -->
+        <div class="flex flex-1 justify-center items-center">
+            <form class="w-[50%] max-w-lg flex flex-col gap-6" id="paymentForm">
+            <div class="w-full bg-gray-100 shadow-lg rounded-xl flex flex-col gap-6 p-6">
+                <div class="text-2xl text-center">Select a payment method :</div>
+
+                <!-- Payment options -->
+                <div class="border-gray-200 border-2 flex justify-between p-2">
+                <div>
+                    <input type="radio" id="netBANKING" name="button" value="netBANKING">
+                    <label for="netBANKING" class="ml-5">Net Banking</label>
+                </div>
+                <img src="../images/netBANKING.png" class="w-10 h-10 hover:shadow-lg">
+                </div>
+
+                <div class="border-gray-200 border-2 flex justify-between p-2">
+                <div>
+                    <input type="radio" id="UPI" name="button" value="upi">
+                    <label for="UPI" class="ml-5">UPI</label>
+                </div>
+                <img src="../images/UPI-Logo.png" class="w-10 h-10 hover:shadow-lg">
+                </div>
+
+                <div class="border-gray-200 border-2 flex justify-between p-2">
+                <div>
+                    <input type="radio" id="Debit" name="button" value="debit">
+                    <label for="Debit" class="ml-5">Debit Card</label>
+                </div>
+                <img src="../images/visa-debit-logo.png" class="w-10 h-10 hover:shadow-lg">
+                </div>
+
+                <div class="border-gray-200 border-2 flex justify-between p-2">
+                <div>
+                    <input type="radio" id="paypal" name="button" value="paypal">
+                    <label for="paypal" class="ml-5">PayPal</label>
+                </div>
+                <img src="../images/paypal.png" class="w-10 h-10 hover:shadow-lg">
+                </div>
+
+                <p id="error" class="text-sm text-red-500"></p>
+                <div id="fee" class="text-lg">Amount to pay :</div>
+
+                <button type="submit" class="mt-2 bg-green-700 p-3 rounded-md text-white hover:shadow-lg">
+                Proceed
+                </button>
+            </div>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-auto w-full">
+            <p class="bg-green-700 text-[10px] text-white p-1 text-center">
+            &copy; 2025 Arjun S G | All rights reserved
+            </p>
+        </footer> 
+        <script>
+            document.addEventListener('DOMContentLoaded',()=>{
+            const fee=document.getElementById("fee");
+            const feeAmount = localStorage.getItem('bus fee');
+            
+            if(fee)
+            fee.textContent=`Total Fee to Pay: ₹${feeAmount}`;
+            else
+                fee.textContent="Unavailable data";
+            const error=document.getElementById("error");
+            const radioButtons = Array.from(document.getElementsByName('button'));
+            const form = document.getElementById("paymentForm"); // Get all radio buttons with the same name
+            
+            radioButtons.forEach((btn) => {
+            btn.addEventListener("input", getSelectedRadioValue);
+            btn.addEventListener("blur", getSelectedRadioValue);});
+
+            function getSelectedRadioValue() {
+                const selected = [...radioButtons].some(btn => btn.checked);
+                error.textContent = selected ? "" : "Select a payment option";
+                error.classList.toggle("border-red", !selected);}
+            
+            form.addEventListener("submit", (e) => {
+            e.preventDefault(); // stop default first
+
+            const selected = radioButtons.some(btn => btn.checked);
+            if (!selected) {
+                error.textContent = "Please select a payment option before proceeding.";
+                return; // stop here if not selected
+            }
+
+            // Only run this part when a payment option is selected
+            alert("Do not refresh the page while the payment is being processed.");
+            window.location.href = "success.html";
+            });
+            })
+            
+        </script>
+        <script src="../JS_Files/trasition_pages.js"></script>
+    </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Contact
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="icon" type="image/x-icon" href="../images/Cet_logo.jpg">
+    </head>
+    <body class="flex flex-wrap flex-col overflow-x-hidden opacity-0 transition-opacity duration-500 ease-in-out bg-gray-100">
+        <!--HEADER-->
+        <header class="flex items-center justify-between px-6 py-3 w-full bg-white bg-opacity-90 shadow-md fixed top-0 left-0 z-50">
+        <!-- Left: Logo + Title -->
+        <div class="flex items-center space-x-4">
+            <a href="#"><img src="../images/Cet_logo.jpg" alt="CET Logo" class="h-[70px] w-auto"></a>
+            <div>
+            <p class="font-bold text-lg leading-tight">COLLEGE OF ENGINEERING TRIVANDRUM</p>
+            <p class="text-gray-500 text-sm leading-none">Action is superior to inaction</p>
+            </div>
+        </div>
+
+        <!-- Desktop Navbar -->
+        <nav class="hidden md:flex items-center space-x-6">
+            <a href="main_page.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="home">Home</a>
+
+            <div class="relative group">
+            <a href="apply.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="apply">Apply</a>
+            </div>
+
+            <div class="relative group">
+            <a href="About.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="about">About</a>
+            </div>
+
+            <a href="contact.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="contact">Contact</a>
+        </nav>
+
+        <!-- Desktop Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+            <button class="px-4 py-2  text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+            onclick="window.location.href='Login.html';">Login</button>
+            <button class="px-4 py-2  text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+            onclick="window.location.href='sign_up.html';">Sign Up</button>
+        </div>
+
+        <!-- Hamburger for Mobile -->
+        <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="p-2 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            </button>
+        </div>
+        </header>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white text-green-700 flex flex-col items-center space-y-4 py-4 shadow-lg w-full absolute top-[80px] left-0 z-40">
+            <a href="main_page.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="home">Home</a>
+            <a href="apply.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="apply">Apply</a>
+             <a href="About.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="about">About</a>
+            <a href="contact.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="contact">Contact</a>
+            <button class="px-4 py-2 text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+            onclick="window.location.href='Login.html';">Login</button>
+            <button class="px-4 py-2 text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+            onclick="window.location.href='sign_up.html';">Sign Up</button>
+        </div>
+        <!--BODY-->
+        <div class="mt-[110px] flex flex-col sm:flex-row items-start justify-center space-x-6 ">
+            <div class="p-3 w-full  mr-4 shadow-lg sm:w-full sm:p-4 sm:m-4 bg-white rounded-lg">
+                <form class="flex flex-col space-y-4" id="contactForm" autocomplete="off">
+                <h1 class="text-2xl">Contact us</h1>
+                <label for="name">Name:</label>  
+                <input type="text" value="" placeholder="Enter your name" class="block w-full border-green-700 border-b-2
+                rounded-sm focus:outline-green-700 focus:outline-1 duration-500 ease-in-out" id="name">
+                <p class="text-red-500 text-sm" id="nameError"></p> 
+                <label for="id">Registration id: </label>
+                <input type="text" value="" placeholder="Enter your ID" class="block w-full border-green-700 border-b-2
+                rounded-sm focus:outline-green-700 focus:outline-1 duration-500 ease-in-out" id="ID"> 
+                <p id="IDError" class="text-red-500 text-sm"></p>
+                <label for="email">Email: </label>
+                <input type="text" value="" placeholder="Enter your email" class="block w-full border-green-700 border-b-2
+                rounded-sm focus:outline-green-700 focus:outline-1 duration-500 ease-in-out" id="email">
+                <p id="emailError" class="text-red-500 text-sm"></p>
+                <label for="route">Selected route : </label>
+                <select class="block border-green-700 border-b-2 rounded-sm focus:outline-green-700 focus:outline-1 duration-500 ease-in-out"
+                id="route">
+                    <option value="">Select route : </option>
+                    <option value="A">A</option>
+                    <option value="N">N</option>
+                    <option value="P">P</option>
+                    <option value="T">T</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="V">V</option>
+                </select>
+                <p id="routeError" class="text-red-500 text-sm"></p>
+                <label>Descibe your problem here : </label>
+                <textarea name="message" class="block w-full border-green-700 border-b-2 
+                rounded-sm focus:outline-green-700 focus:outline-1 duration-500 ease-in-out" id="text"></textarea>
+                <p id="textError" class="text-red-500 text-sm mt-2"></p>
+                <button type="submit" class="bg-green-700 text-white p-2 m-3 rounded-sm hover:shadow-lg hover:bg-green-800"
+                 id="submit">Submit</button>
+                </form>
+                
+            </div>
+            <div class=" p-4 w-full mt-3 flex flex-col shadow-lg bg-white sm:m-4 rounded-lg">
+                <p class="text-center text-2xl">FAQs</p>
+                <ol class="list-decimal p-5">
+                    <li>Application and Registration</li>
+                    <ul class="list-disc ml-4">
+                        <li>How do I apply for a new bus pass?</li>
+                        <p class="text-sm">Go to the Apply page, fill in your details, select your route, and submit the form.</p>
+                        <li>Can I edit my details after submitting the form?</li>
+                        <p class="text-sm">No, but you can contact the transport office or raise a support ticket for corrections.</p>
+                        <li>I did not receive my application confirmation — what should I do?</li>
+                        <p class="text-sm">Check your spam folder. If not found, raise a ticket with your register number and email.</p>
+                        <li>Can I apply for more than one route?</li>
+                        <p class="text-sm">No. Each student is allowed to select only one bus route.</p>
+                    </ul>
+                    <li>Payment and fees</li>
+                    <ul class="list-disc ml-4">
+                        <li>What should I do if my payment fails?</li>
+                        <p class="text-sm">Wait a few minutes and check your bank account. If the amount was deducted but not reflected, 
+                            raise a ticket with a screenshot of the transaction.</p>
+                        <li>Is the bus fee refundable?</li>
+                        <p class="text-sm">No, the bus fee is non-refundable once payment is confirmed.</p>
+                        <li>Can I pay the fee offline?</li>
+                        <p class="text-sm">No, currently only online payments through the portal are accepted.</p>
+                    </ul>
+                   
+                </ol>
+                 <button type="button" id="button" class="flex items-center justify-between bg-green-700 text-white p-3 m-3 mt-0
+                 w-[100px] rounded-lg hover:shadow-lg hover:bg-green-800">View more</button>
+                    <div class="hidden sm:m-4 p-4" id="hidden">
+                        <ol class="list-decimal" start="3">
+                    <li>Routes and pass</li>
+                    <ul class="list-disc ml-4">
+                        <li>How can I know which route to choose?</li>
+                        <p class="text-sm">you can choose the route by clicking on the dropdown menus in the apply page</p>
+                        <li>What if I board a different route bus by mistake?</li>
+                        <p class="text-sm">Show your pass to the conductor and inform the bus office later.</p>
+                        <li>Can I change my route after getting the pass?</li>
+                        <p class="text-sm">Yes, but only during the renewal period and with proper approval.</p>
+                    </ul>
+                    <li>Pass validity and renewal</li>
+                    <ul class="list-disc ml-4">
+                        <li>How long is the bus pass valid?</li>
+                        <p class="text-sm">Bus pass is valid for 6 or 3 months from date of issues</p>
+                        <li>how to renew the pass?</li>
+                        <p class="text-sm">Click on the renew option and fill the necessary details and wait till the confirmation form bus ofiice.</p>
+                    </ul>
+                    <li>Response</li>
+                    <ul class="list-disc ml-4">
+                        <li>when will i get the bus pass after payment?</li>
+                        <p class="text-sm">it usually takes 7 working days to issue the bus pass.</p>
+                        <li>Can i visit the bus office without applying online?</li>
+                        <p class="text-sm">yes, you can.</p>
+                    </ul>
+                    </ol>
+                    <button type="button" id="buttonless" class="flex items-center justify-between bg-green-700 
+                    text-white p-3 m-3 rounded-lg hover:shadow-lg hover:bg-green-800">View less</button>
+                    </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="flex flex-col space-y-2 bg-green-700 mt-5"> 
+                <button class="fixed bottom-25 rounded-md hover:shadow-lg right-6 bg-green-700 text-white flex-end
+                 ml-auto z-50 w-[30px] h-[30px] hover:opacity-90" id="BacktoTop">^</button>               
+                <div>
+                    <p class="pl-3 text-white">If you have any queries, contact the bus office,</p>
+                    <p class="pl-5 text-white">Contact:+91 xxxxx-xxxxx</p>
+                    <p class="pl-5 text-white">Email: BusofficeCET@gmail.com</p>
+                    <p class=" text-sm text-white flex justify-center items-center">
+                </div>              
+                <p class="text-white text-center text-[10px]">@copyright 2025 Arjun S G | All rights reserved</p>
+            </div>
+         </footer>
+                
+        <script src="../JS_Files/hamburger.js"></script>
+        <script src="../JS_Files/contact_FAQ.js"></script>
+        <script src="../JS_Files/trasition_pages.js"></script>
+        <script src="../JS_Files/contact_validation.js"></script>
+        <div id="toast" class="fixed bottom-8 right-8 bg-green-600 text-white px-5 py-3 rounded-lg text-sm 
+            opacity-0 translate-y-5 transition-all duration-500 z-[9999]"></div>
+        <script>
+            const BacktoTop=document.getElementById("BacktoTop");
+            window.addEventListener("scroll",()=>{
+                if(window.scrollY>200)
+                BacktoTop.classList.remove("hidden");
+                else
+                BacktoTop.classList.add("hidden");
+            })
+            BacktoTop.addEventListener("click",()=>{
+                window.scrollTo({top:0,behavior: "smooth"});
+            })
+        </script>
+    </body>
+</html>

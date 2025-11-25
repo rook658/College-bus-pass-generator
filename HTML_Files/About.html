@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            About
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="icon" type="image/x-icon" href="../images/Cet_logo.jpg">
+    </head>
+    <body class="flex flex-wrap flex-col overflow-x-hidden opacity-0 transition-opacity duration-500 ease-in-out">
+        <!--HEADER-->
+        <header class="flex items-center justify-between px-6 py-3 w-full bg-white bg-opacity-90 shadow-md fixed top-0 left-0 z-50">
+        <!-- Left: Logo + Title -->
+        <div class="flex items-center space-x-4">
+            <a href="#"><img src="../images/Cet_logo.jpg" alt="CET Logo" class="h-[70px] w-auto"></a>
+            <div>
+            <p class="font-bold text-lg leading-tight">COLLEGE OF ENGINEERING TRIVANDRUM</p>
+            <p class="text-gray-500 text-sm leading-none">Action is superior to inaction</p>
+            </div>
+        </div>
+
+        <!-- Desktop Navbar -->
+        <nav class="hidden md:flex items-center space-x-6">
+            <a href="main_page.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="home">Home</a>
+
+            <div class="relative group">
+            <a href="apply.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="apply">Apply</a>
+            </div>
+
+            <div class="relative group">
+            <a href="About.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="about">About</a>
+            </div>
+
+            <a href="contact.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="contact">Contact</a>
+        </nav>
+
+        <!-- Desktop Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+            <button class="px-4 py-2 text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+            onclick="window.location.href='sign_up.html';">Login</button>
+            <button class="px-4 py-2 text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+            onclick="window.location.href='sign_up.html';">Sign Up</button>
+        </div>
+
+        <!-- Hamburger for Mobile -->
+        <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="p-2 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            </button>
+        </div>
+        </header>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white text-green-700 flex flex-col items-center space-y-4 py-4 shadow-lg w-full absolute top-[80px] left-0 z-40">
+            <a href="main_page.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="home">Home</a>
+            <a href="apply.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="apply">Apply</a>
+             <a href="About.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="about">About</a>
+            <a href="contact.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="contact">Contact</a>
+            <button class="px-4 py-2 text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+            onclick="window.location.href='Login.html.html';">Login</button>
+            <button class="px-4 py-2 text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+            onclick="window.location.href='sign_up.html';">Sign Up</button>
+        </div>
+        <div class="mt-[100px] ml-[50px] p-6"> 
+            <ol class="list-decimal">
+                <li class="text-green-700 text-2xl">About the website</li>
+                    <ul class="list-disc m-4">
+                           <li>CET bus pass portal is designed to digitalize the process of getting the bus pass.</li>
+                           <li>It simplifies the 
+                            process of applying and recieving the pass for both staffs and students. this ensures transparency
+                            efficiency,accessibility and easy updation.</li>
+                        </ul>
+                <li class="text-green-700 text-2xl">Objectives of Website</li>
+                <ul class="list-disc m-4">
+                    <li>Anyone can request for bus pass from anywhere</li>
+                    <li>know your transport details accurately</li>
+                    <li>Can avoid queues and paperwork</li>
+                    <li>recieve instant Updates and notifications</li>
+                    <li>easy renewal process</li>
+                </ul>
+            <li class="text-green-700 text-2xl">Eligibility and rules</li>
+                <ul class="list-disc m-4">
+                    <li>Bus passes are available for all students and staffs</li>
+                    <li>Passes will be valid for 3 months or 6 months</li>
+                    <li>All updates will be posted in the Updates section of this website</li>
+                    <li>If you have any doubts,refer the contact page<div class="block object-none w-[180px]">
+                        <a href="contact.html" class="block text-green-700 underline text-sm hover:text-green-900">
+                            Click here to go to Contacts</a></div></li>
+                    <li>Lost passes can be reissued with penalty fee</li>
+                </ul>
+            <li class="text-green-700 text-2xl">How it works</li>
+            <ul class="list-disc m-4">
+                <li>Go to apply page and fill the Application</li>
+                <li>Then proceed to pay and pay using available options</li>
+                <li>download the reciept </li>
+                <li>Recieve the generated buspass from bus office after 7 working days once its verified</li>
+            </ul>
+            </ol>
+        </div>
+        <footer>
+            <button class="fixed bottom-10 rounded-md hover:shadow-lg right-6 bg-green-700 text-white flex-end 
+            ml-auto z-50 w-[30px] h-[30px] hover:opacity-90" id="BacktoTop">^</button> 
+            <div>
+              <p class="bg-green-700 text-[10px] text-white flex justify-center items-center">
+                @copyright 2025 Arjun S G | All rights reserved</p>
+            </div>
+         </footer>
+                
+        <script src="../JS_Files/hamburger.js"></script>
+        <script src="../JS_Files/trasition_pages.js"></script>
+        <script>
+            const BacktoTop=document.getElementById("BacktoTop");
+            window.addEventListener("scroll",()=>{
+                if(window.scrollY>200)
+                BacktoTop.classList.remove("hidden");
+                else
+                BacktoTop.classList.add("hidden");
+            })
+            BacktoTop.addEventListener("click",()=>{
+                window.scrollTo({top:0,behavior: "smooth"});
+            })
+        </script>
+    </body>
+</html>

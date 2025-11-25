@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Apply
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="icon" type="image/x-icon" href="../images/Cet_logo.jpg">
+    </head>
+    <body class="flex flex-wrap flex-col opacity-0 overflow-x-hidden transition-opacity duration-500 ease-in-out">
+                <!--HEADER-->
+        <header class="flex items-center justify-between px-6 py-3 w-full bg-white bg-opacity-90 shadow-md fixed top-0 left-0 z-50">
+        <!-- Left: Logo + Title -->
+        <div class="flex items-center space-x-4">
+            <a href="#"><img src="../images/Cet_logo.jpg" alt="CET Logo" class="h-[70px] w-auto"></a>
+            <div>
+            <p class="font-bold text-lg leading-tight">COLLEGE OF ENGINEERING TRIVANDRUM</p>
+            <p class="text-gray-500 text-sm leading-none">Action is superior to inaction</p>
+            </div>
+        </div>
+
+        <!-- Desktop Navbar -->
+        <nav class="hidden md:flex items-center space-x-6">
+            <a href="main_page.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="home">Home</a>
+
+            <div class="relative group">
+            <a href="apply.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="apply">Apply</a>
+            </div>
+
+            <div class="relative group">
+            <a href="About.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="about">About</a>
+            </div>
+
+            <a href="contact.html" class="p-3 hover:bg-green-700 hover:text-white rounded-lg" id="contact">Contact</a>
+        </nav>
+
+        <!-- Desktop Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+            <button class="px-4 py-2 text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+            onclick="window.location.href='Login.html';">Login</button>
+            <button class="px-4 py-2 text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+            onclick="window.location.href='sign_up.html';">Sign Up</button>
+        </div>
+
+        <!-- Hamburger for Mobile -->
+        <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="p-2 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            </button>
+        </div>
+        </header>
+                <div id="mobile-menu"
+                        class="hidden md:hidden bg-white text-green-700 flex flex-col items-center space-y-4 py-4 shadow-lg w-full absolute top-[80px] left-0 z-40">
+                        <a href="main_page.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="home">Home</a>
+                        <a href="apply.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="apply">Apply</a>
+                        <a href="About.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="about">About</a>
+                        <a href="contact.html" class="block px-4 py-2 hover:bg-green-700 hover:text-white rounded-lg" id="contact">Contact</a>
+                        <button class="px-4 py-2 text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+                        onclick="window.location.href='Login.html';">Login</button>
+                        <button class="px-4 py-2 text-green-700 rounded-lg hover:bg-green-700 hover:text-white transition"
+                        onclick="window.location.href='sign_up.html';">Sign Up</button>
+                        </div>
+    <!--BODY-->
+    <div class="w-full flex flex-wrap items-center justify-center mt-[100px]
+    sm:h-[100px] bg-green-700">    
+        <p class="flex text-3xl text-white p-3">Application form</p>
+    </div>
+    <div class="w-full flex flex-col justify-center items-center mt-6 px-4">
+        <!--PERSONAL DETAILS-->
+        <form id="myForm" autocomplete="off" class="w-full max-w-10xl bg-white shadow-lg rounded-2xl p-8 border-b border-gray-200">
+            <div class="flex flex-row">
+                <div class="bg-green-500 w-[30px]"></div>
+                <h3 class="text-white text-3xl bg-green-700 p-2 w-full">Personal details :</h3>
+            </div>
+            <div class="grid grid-cols-1 items-start sm:grid-cols-2 gap-6 place-content-between">
+                <div>       
+                    <label for="name" class="block m-5 text-2xl">Name :</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name"
+                    class="border-b-2 border-green-700  rounded-sm w-full p-2 focus:border-green-700 
+                    focus:ring-1 focus:ring-green-700 focus:outline-none 
+                    transform: duration-300 ease-in-out">
+                    <p id="nameError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                </div>
+                <div>       
+                    <label for="ID" class="block m-5 text-2xl">University Registration ID :</label>
+                    <input type="text" name="ID" id="ID" placeholder="Enter your ID"
+                    class="border-b-2 border-green-700  rounded-sm w-full p-2 focus:border-green-700 
+                    focus:ring-1 focus:ring-green-700 focus:outline-none 
+                    transform: duration-300 ease-in-out">
+                    <p id="IDError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                </div>
+                <div>
+                    <label for="class" class="block m-5 text-2xl">Class :</label>
+                    <input type="text" name="class" placeholder="Eg-S3" id="class"
+                    class="border-b-2 border-green-700 rounded-sm w-full p-2
+                    focus:border-green-700 
+                    focus:ring-1 focus:ring-green-700 focus:outline-none transform: duration-300 ease-in-out">
+                    <p id="classError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                </div>
+                <div>    
+                    <label for="dept" class="block m-5 text-2xl">Department :</label>
+                    <input type="text" name="dept" placeholder="Eg-CSE,ECE..." id="dept"
+                    class="border-b-2 border-green-700 rounded-sm w-full p-2
+                    focus:border-green-700 
+                    focus:ring-1 focus:ring-green-700 focus:outline-none transform: duration-300 ease-in-out">
+                    <p id="deptError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                </div>
+                <div>
+                    <label for="year" class="block m-5 text-2xl">Year of study :</label>
+                    <input type="text" name="year" placeholder="2025" class="border-b-2 border-green-700 rounded-sm w-full p-2 
+                    focus:border-green-700 focus:ring-1 focus:ring-green-700 focus:outline-none 
+                    transform: duration-300 ease-in-out" id="year">
+                    <p id="yearError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                </div>
+                <div>
+                    <label for="mail" class="block m-5 text-2xl">Email :</label>
+                    <input type="email" placeholder="user@gmail.com" name="mail" class="border-b-2 border-green-700 rounded-sm w-full p-2
+                    focus:border-green-700 focus:ring-1 focus:ring-green-700 
+                    focus:outline-none transform: duration-300 ease-in-out" id="email">
+                    <p id="emailError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                </div>
+                <div>
+                    <label for="phone" class="block m-5 text-2xl">Phone number :</label>
+                    <input type="text" name="phone" class="border-b-2 border-green-700 rounded-sm w-full p-2
+                    focus:border-green-700 focus:ring-1 focus:ring-green-700 
+                    focus:outline-none transform: duration-300 ease-in-out" id="phone">
+                    <p id="phoneError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                </div>
+                <div class="sm:col-span-2 flex flex-col items-start">
+                <label for="photo" class="block m-5 text-2xl">Upload your photo</label>
+
+                <input type="file" id="photo" name="photo" accept="image/*" class="hidden">
+
+                <label for="photo" class="cursor-pointer flex flex-col items-center justify-center bg-green-700 text-white 
+                    px-2 py-2 rounded-lg shadow-md hover:bg-green-800 transition-all w-48">
+                    <!-- Upload Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        class="h-8 w-8 mb-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12V4m0 0l-4 4m4-4l4 4" />
+                    </svg>
+                    <span class="text-lg font-semibold">Upload Photo</span>
+                </label>
+
+                <!--Keep preview and error OUTSIDE the label -->
+                <img id="photoPreview"
+                    class="mt-4 w-24 h-32 object-cover rounded-md hidden border-2 border-gray-300 shadow-md bg-gray-100"
+                    alt="Passport-size Preview">
+                <p id="photoError" class="text-red-500 text-sm mt-2 mb-2"></p>
+            </div>
+            <div class="w-[30px]"></div>
+            </div>
+        
+        <!--BUS DETAILS-->
+            <div class="flex flex-row">
+                <div class="bg-green-500 w-[30px]"></div>
+                <h3 class="text-white text-3xl bg-green-700 p-2 w-full">Bus details :</h3>
+            </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 place-content-between">
+                    <div>       
+                        <label for="route" class="block m-5 text-2xl">Route :</label>
+                        <select value="route" id="route" class="border-b-2 border-green-700 rounded-sm w-full p-2
+                        focus:border-green-700 transform: duration-300 ease-in-out
+                    focus:ring-1 focus:ring-green-700 focus:outline-none">
+                            <option value="">Select route</option>
+                            <option value="A">A</option>
+                            <option value="N">N</option>
+                            <option value="P">P</option>
+                            <option value="T">T</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="V">V</option>
+                        </select>
+                        <p id="routeError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                    </div>
+                    <div>
+                        <label for="point" class="block m-5 text-2xl">Boarding Point :</label>
+                        <select value="point" id="point"
+                        class="border-b-2 border-green-700 rounded-sm w-full p-2
+                        focus:border-green-700 transform: duration-300 ease-in-out
+                    focus:ring-1 focus:ring-green-700 focus:outline-none">
+                        </select>
+                        <p id="boardingError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                    </div>
+                    <div>    
+                        <label for="type" class="block m-5 text-2xl">Staff/Student :</label>
+                        <select value="type" id="type" class="border-b-2 border-green-700 rounded-sm w-full p-2
+                        focus:border-green-700 transform: duration-300 ease-in-out
+                    focus:ring-1 focus:ring-green-700 focus:outline-none">
+                            <option value="">Select Passenger type</option>
+                            <option value="Staff">Staff</option>
+                            <option value="Student">Student</option>                            
+                        </select>
+                        <p id="typeError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                    </div>
+                    <div>
+                        <label for="time" class="block m-5 text-2xl">Duration of pass :</label>
+                        <select vlaue="time" id="duration" class="border-b-2 border-green-700 rounded-sm w-full p-2
+                        focus:border-green-700 transform: duration-300 ease-in-out
+                    focus:ring-1 focus:ring-green-700 focus:outline-none">
+                            <option value="">Select Duration of pass</option>
+                            <option value="3 months">3 months</option>
+                            <option value="6 months">6 months</option>
+                        </select>
+                        <p id="durationError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
+                    </div>
+                </div>
+                <p class="text-green-700 mt-3 pb-0 text-2xl" id="fee">Total Fee :</p>
+                <button id="proceed" type="submit" class="bg-green-700 hover:bg-green-800 
+        text-white font-semibold px-6 py-2 rounded-md transition-all shadow-md mt-2" >Proceed to pay</button>
+        </form>
+
+        
+    </div>
+    <div class="w-full h-[30px]">
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <button class="fixed bottom-10 rounded-md hover:shadow-lg right-6 bg-green-700 text-white flex-end 
+        ml-auto z-50 w-[30px] h-[30px] hover:opacity-90" id="BacktoTop">^</button>               
+                <div>
+            <div>
+              <p class="bg-green-700 text-[10px] text-white p-3 pb-0 flex justify-center items-center">
+                @copyright 2025 Arjun S G | All rights reserved</p>
+            </div>
+         </footer>
+    <!--JS BEHIND THE PAGE-->
+    <script src="../JS_Files/hamburger.js"></script>
+    <script src="../JS_Files/form_validation.js"></script>
+    <script src="../JS_Files/bus_route.js"></script>    
+    <script src="../JS_Files/trasition_pages.js"></script>
+    <script>
+            const BacktoTop=document.getElementById("BacktoTop");
+            window.addEventListener("scroll",()=>{
+                if(window.scrollY>500)
+                BacktoTop.classList.remove("hidden");
+                else
+                BacktoTop.classList.add("hidden");
+            })
+            BacktoTop.addEventListener("click",()=>{
+                window.scrollTo({top:0,behavior: "smooth"});
+            })
+        </script>
+    </body>
+</html>

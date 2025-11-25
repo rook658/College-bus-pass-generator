@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sign up
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="icon" type="image/x-icon" href="../images/Cet_logo.jpg">
+    </head>
+    <body class="flex flex-col overflow-x-hidden transition-opacity duration-500 ease-in-out min-h-screen 
+    bg-[url('../images/college_of_engineering_trivandrum_cover.jpg')] bg-cover bg-center bg-no-repeat opacity-80">
+        <div class="flex flex-col items-center justify-center flex-1">
+        <form autocomplete="off" class="z-50 border-2 mt-2 border-gray-200 rounded-lg flex flex-col gap-6 w-[90%] sm:w-[80%] md:w-[50%] 
+        lg:w-[40%] xl:w-[40%] md:p-3 bg-white/90 p-2 sm:p-3">
+            <div class="text-black text-5xl p-3">Sign up</div>
+            <label for="name" class="">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" class="border-2 border-gray-300 sm:p-2
+            p-1 rounded-lg focus:border-green-700 outline-none ">
+            <label for="ID" class="">University ID:</label>
+            <input type="text" name="ID" id="ID" placeholder="Enter your id" class="border-2 border-gray-300 sm:p-2
+            p-1 rounded-lg focus:border-green-700 outline-none ">
+            <label for="Email" class="">Email:</label>
+            <input type="text" name="Email" id="Email" placeholder="Enter your email" class="border-2 border-gray-300 sm:p-2
+            p-1 rounded-lg focus:border-green-700 outline-none ">
+            <div class="flex flex-row justify-between items-center">
+                <label for="setPassword">Set Password:</label>
+                <button type="button" onclick="togglePassword('setPassword', this)" class="relative h-[35px] w-[35px]">
+                    <img src="../images/dontshowPASSWORD.png" class="show-icon h-[20px] w-[30px]">
+                    <img src="../images/showPASSWORD.png" class="hide-icon hidden">
+                </button>
+            </div>
+            <input type="password" name="setPassword" id="setPassword" placeholder="Set your id" class="border-2 border-gray-300 sm:p-2 p-1
+            rounded-lg focus:border-green-700 outline-none">
+            <div class="flex flex-row justify-between items-center">
+                <label for="confirmpassword">Confirm password:</label>
+
+                <button type="button" onclick="togglePassword('confirmpassword', this)" class="relative h-[35px] w-[35px]">
+                    <img src="../images/dontshowPASSWORD.png" class="show-icon h-[20px] w-[30px]">
+                    <img src="../images/showPASSWORD.png" class="hide-icon hidden">
+                </button>
+            </div>           
+            <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm your id" class="border-2 border-gray-300 sm:p-2
+            p-1 rounded-lg focus:border-green-700 outline-none ">
+            <button type="submit" id="login" class="bg-green-700 text-white p-3 rounded-full w-[100px]
+            hover:bg-green-800 opacity-100">Sign up</button>
+        </form>
+        </div>
+        <footer class="mt-0 sm:mt-4 w-full">
+            <p class="bg-green-700 text-[10px] text-white p-1 text-center">
+            &copy; 2025 Arjun S G | All rights reserved
+            </p>
+        </footer>
+        <script>
+        function togglePassword(inputId, btn) {
+            const input = document.getElementById(inputId);
+            const showIcon = btn.querySelector(".show-icon");
+            const hideIcon = btn.querySelector(".hide-icon");
+
+            if (input.type === "password") {
+                input.type = "text";
+                showIcon.classList.add("hidden");
+                hideIcon.classList.remove("hidden");
+            } else {
+                input.type = "password";
+                showIcon.classList.remove("hidden");
+                hideIcon.classList.add("hidden");
+            }
+        }
+    </script>
+
+    </body>
+</html>
