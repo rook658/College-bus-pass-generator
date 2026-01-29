@@ -77,6 +77,16 @@
     <!-- JS -->
     <script src="JS_Files/hamburger.js"></script>
     <script src="JS_Files/trasition_pages.js"></script>
+    <script>
+            const btn = document.getElementById("menu-btn");
+            const menu = document.getElementById("mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+
 </body>
 </html>
+
 
