@@ -18,12 +18,7 @@ HTML5 – Structure
 CSS(Tailwind css) – Styling and layout
 JavaScript (ES6) – Client-side logic
 
-Installation and usage
-
-1.Clone the repository:
-git clone https://github.com/your-username/bus-pass-generator-frontend.git
-2.Navigate to the project directory
-3.Open index.html in your web browser
+Live demo: https://rook658.github.io/College-bus-pass-generator/
 
 Project Scope
 
