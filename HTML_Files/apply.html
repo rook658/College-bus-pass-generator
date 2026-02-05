@@ -79,7 +79,7 @@
             </div>
             <div class="grid grid-cols-1 items-start sm:grid-cols-2 gap-6 place-content-between">
                 <div>       
-                    <label for="name" class="block m-5 text-2xl">Name :</label>
+                    <label for="name" class="block m-5 text-sm sm:text-base md:text-lg">Name :</label>
                     <input type="text" name="name" id="name" placeholder="Enter your name"
                     class="border-b-2 border-green-700  rounded-sm w-full p-2 focus:border-green-700 
                     focus:ring-1 focus:ring-green-700 focus:outline-none 
@@ -87,7 +87,7 @@
                     <p id="nameError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
                 </div>
                 <div>       
-                    <label for="ID" class="block m-5 text-2xl">University Registration ID :</label>
+                    <label for="ID" class="block m-5 text-sm sm:text-base md:text-lg">University Registration ID :</label>
                     <input type="text" name="ID" id="ID" placeholder="Enter your ID"
                     class="border-b-2 border-green-700  rounded-sm w-full p-2 focus:border-green-700 
                     focus:ring-1 focus:ring-green-700 focus:outline-none 
@@ -95,7 +95,7 @@
                     <p id="IDError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
                 </div>
                 <div>
-                    <label for="class" class="block m-5 text-2xl">Class :</label>
+                    <label for="class" class="block m-5 text-sm sm:text-base md:text-lg">Class :</label>
                     <input type="text" name="class" placeholder="Eg-S3" id="class"
                     class="border-b-2 border-green-700 rounded-sm w-full p-2
                     focus:border-green-700 
@@ -103,7 +103,7 @@
                     <p id="classError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
                 </div>
                 <div>    
-                    <label for="dept" class="block m-5 text-2xl">Department :</label>
+                    <label for="dept" class="block m-5 text-sm sm:text-base md:text-lg">Department :</label>
                     <input type="text" name="dept" placeholder="Eg-CSE,ECE..." id="dept"
                     class="border-b-2 border-green-700 rounded-sm w-full p-2
                     focus:border-green-700 
@@ -111,28 +111,28 @@
                     <p id="deptError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
                 </div>
                 <div>
-                    <label for="year" class="block m-5 text-2xl">Year of study :</label>
+                    <label for="year" class="block m-5 text-sm sm:text-base md:text-lg">Year of study :</label>
                     <input type="text" name="year" placeholder="2025" class="border-b-2 border-green-700 rounded-sm w-full p-2 
                     focus:border-green-700 focus:ring-1 focus:ring-green-700 focus:outline-none 
                     transform: duration-300 ease-in-out" id="year">
                     <p id="yearError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
                 </div>
                 <div>
-                    <label for="mail" class="block m-5 text-2xl">Email :</label>
+                    <label for="mail" class="block m-5 text-sm sm:text-base md:text-lg">Email :</label>
                     <input type="email" placeholder="user@gmail.com" name="mail" class="border-b-2 border-green-700 rounded-sm w-full p-2
                     focus:border-green-700 focus:ring-1 focus:ring-green-700 
                     focus:outline-none transform: duration-300 ease-in-out" id="email">
                     <p id="emailError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
                 </div>
                 <div>
-                    <label for="phone" class="block m-5 text-2xl">Phone number :</label>
+                    <label for="phone" class="block m-5 text-sm sm:text-base md:text-lg">Phone number :</label>
                     <input type="text" name="phone" class="border-b-2 border-green-700 rounded-sm w-full p-2
                     focus:border-green-700 focus:ring-1 focus:ring-green-700 
                     focus:outline-none transform: duration-300 ease-in-out" id="phone">
                     <p id="phoneError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
                 </div>
                 <div class="sm:col-span-2 flex flex-col items-start">
-                <label for="photo" class="block m-5 text-2xl">Upload your photo</label>
+                <label for="photo" class="block m-5 text-sm sm:text-base md:text-lg">Upload your photo</label>
 
                 <input type="file" id="photo" name="photo" accept="image/*" class="hidden">
 
@@ -146,8 +146,6 @@
                     </svg>
                     <span class="text-lg font-semibold">Upload Photo</span>
                 </label>
-
-                <!--Keep preview and error OUTSIDE the label -->
                 <img id="photoPreview"
                     class="mt-4 w-24 h-32 object-cover rounded-md hidden border-2 border-gray-300 shadow-md bg-gray-100"
                     alt="Passport-size Preview">
@@ -159,11 +157,11 @@
         <!--BUS DETAILS-->
             <div class="flex flex-row">
                 <div class="bg-green-500 w-[30px]"></div>
-                <h3 class="text-white text-3xl bg-green-700 p-2 w-full">Bus details :</h3>
+                <h3 class="text-white text-xl sm:text-2xl md:text-3xl bg-green-700 p-2 w-full">Bus details :</h3>
             </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 place-content-between">
                     <div>       
-                        <label for="route" class="block m-5 text-2xl">Route :</label>
+                        <label for="route" class="block m-5 text-sm sm:text-base md:text-lg">Route :</label>
                         <select value="route" id="route" class="border-b-2 border-green-700 rounded-sm w-full p-2
                         focus:border-green-700 transform: duration-300 ease-in-out
                     focus:ring-1 focus:ring-green-700 focus:outline-none">
@@ -179,7 +177,7 @@
                         <p id="routeError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
                     </div>
                     <div>
-                        <label for="point" class="block m-5 text-2xl">Boarding Point :</label>
+                        <label for="point" class="block m-5 text-sm sm:text-base md:text-lg">Boarding Point :</label>
                         <select value="point" id="point"
                         class="border-b-2 border-green-700 rounded-sm w-full p-2
                         focus:border-green-700 transform: duration-300 ease-in-out
@@ -188,7 +186,7 @@
                         <p id="boardingError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
                     </div>
                     <div>    
-                        <label for="type" class="block m-5 text-2xl">Staff/Student :</label>
+                        <label for="type" class="block m-5 text-sm sm:text-base md:text-lg">Staff/Student :</label>
                         <select value="type" id="type" class="border-b-2 border-green-700 rounded-sm w-full p-2
                         focus:border-green-700 transform: duration-300 ease-in-out
                     focus:ring-1 focus:ring-green-700 focus:outline-none">
@@ -199,7 +197,7 @@
                         <p id="typeError" class="text-red-500 text-sm mt-1 min-h-[20px]"></p>
                     </div>
                     <div>
-                        <label for="time" class="block m-5 text-2xl">Duration of pass :</label>
+                        <label for="time" class="block m-5 text-sm sm:text-base md:text-lg">Duration of pass :</label>
                         <select vlaue="time" id="duration" class="border-b-2 border-green-700 rounded-sm w-full p-2
                         focus:border-green-700 transform: duration-300 ease-in-out
                     focus:ring-1 focus:ring-green-700 focus:outline-none">
@@ -248,6 +246,7 @@
     </body>
 
 </html>
+
 
 
 
